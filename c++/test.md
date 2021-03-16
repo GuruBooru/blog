@@ -31,5 +31,35 @@
 
 * 어셈블리 코드 상 바뀌는 것은 없음 &gt; 데이터는 메모리에 그대로 있음
 * CPU는 리틀 엔디안으로 메모리를 읽고 쓰기 때문에 LSB부터 읽으면서 필요없는 부분은 더 이상 읽지 않는 방식
-  * \*정수-실수 변환의 경우 표현하는 방법이 다르기 때문에 변환 함수를 호출\*
+  * _정수-실수 변환의 경우 표현하는 방식이 다르기 때문에 변환 함수 호출_ 
+
+{% tabs %}
+{% tab title="정수 > 실수" %}
+```cpp
+	int intValue = 1000;
+
+	cout << intValue;
+	cout << (double)intValue;
+```
+
+![](../.gitbook/assets/int-double-.png)
+
+double 타입으로 변환하기 위해 **cvtsi2sd** 라는 명령어가 호출
+{% endtab %}
+
+{% tab title="실수 > 정수" %}
+```cpp
+double doubleValue = 10.0;
+
+	cout << doubleValue;
+	cout << (int)doubleValue;
+```
+
+![](../.gitbook/assets/double-int-.png)
+
+int 타입으로 변환하기 위해 cvttsd2si 명령어 호출
+{% endtab %}
+{% endtabs %}
+
+어셈블리는 Visual Studio 2019의 디스어셈블리를 사용하였습니다.
 
