@@ -5,7 +5,7 @@
 ## C++
 
 * [에디안과 어셈블리](c++/undefined.md)
-* [test](c++/test.md)
+* [변수 키워드 / 타입 캐스팅](c++/test.md)
 
 ## network
 
