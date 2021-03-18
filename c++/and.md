@@ -47,6 +47,8 @@ private:
 {% endtab %}
 {% endtabs %}
 
+클래스 변수의 후위 연산은 전위 연산과 다르게 새로운 객체를 생성하여 그 객체를 전달하는 방식을 사용하기 때문에 전위 연산보다 효율이 낮다는 결론을 내릴 수 있다.
+
 
 
 #### 조건문
@@ -108,13 +110,50 @@ else if (a == 3)
 {% endtab %}
 
 {% tab title="switch-case" %}
+```cpp
+int a = 0;
 
+	switch(a)
+	{
+	case 0:
+		cout << "a is zero";
+		break;
+	case 1:
+		cout << "a is one";
+		break;
+	case 2:
+		cout << "a is two";
+		break;
+	case 3:
+		cout << "a is three";
+		break;
+	}
+```
+
+다음과 같은 간략한 switch-case문을 작성했을 때, 어셈블리 코드는  
+
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+이와 같이 나타난다.
+
+코드를 들여다보면 각 케이스 별로 비교를 하고, 일치하는 곳으로 점프하는 방식을 택하는 것을 볼 수 있다.
+
+하지만 switch문이 복잡해진다면,  jump table이라는 것을 활용하여 어셈블리 코드를 작성할 수 도 있다.  
+jump table이란 모든 케이스를 비교하는 것이 아니라, 해당 조건에 해당하는 코드의 위치로 점프할 수 있도록 만든 테이블을 의미하며, jump table을 사용하는 switch case 코드는 다음과 같다.
+
+![](../.gitbook/assets/image%20%283%29.png)
+
+switch-case 문이 단순하다면, 일반 if-else와 동일하게 작동하지만,  
+복잡하게 구성되어 있다면 jump table 을 만들어 작동하는 것으로 보인다.
 {% endtab %}
 
 {% tab title="삼항 연산자" %}
 
 {% endtab %}
 {% endtabs %}
+
+
 
 
 
