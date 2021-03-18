@@ -70,7 +70,7 @@ else
 
 위에 있는 간단한 조건문을 어셈블리로 표현할 경우
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 이와 같이 나타난다.
 
@@ -102,7 +102,7 @@ else if (a == 3)
 
 이와 같은 코드를 작성하여 테스트 해보면
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 이와 같은 결과가 나타난다.
 
@@ -133,7 +133,7 @@ int a = 0;
 다음과 같은 간략한 switch-case문을 작성했을 때, 어셈블리 코드는  
 
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 이와 같이 나타난다.
 
@@ -142,7 +142,7 @@ int a = 0;
 하지만 switch문이 복잡해진다면,  jump table이라는 것을 활용하여 어셈블리 코드를 작성할 수 도 있다.  
 jump table이란 모든 케이스를 비교하는 것이 아니라, 해당 조건에 해당하는 코드의 위치로 점프할 수 있도록 만든 테이블을 의미하며, jump table을 사용하는 switch case 코드는 다음과 같다.
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 switch-case 문이 단순하다면, 일반 if-else와 동일하게 작동하지만,  
 복잡하게 구성되어 있다면 jump table 을 만들어 작동하는 것으로 보인다.
@@ -156,7 +156,7 @@ a == 1 ? 0 : 10;
 
 위에 삼항 연산자 코드를 수행했을 때 어셈블리 코드는 다음과 같다.
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 if-else문과 다를 것 없는 움직임을 보인다.
 
@@ -170,4 +170,65 @@ C++에서 부울 연산을 수행할 경우 앞부분의 결과에 따라 뒷부
 \|\|\(or\) 연산의 경우 true가 나올 확률이 높은 순서로 구성하는 것이 성능에 도움을 줄 수 있다.
 
 
+
+#### 반복문
+
+반복문의 경우 for, while, do-while 문이 있으며, 각자 특이한 경우만 추려서 정리
+
+{% tabs %}
+{% tab title="for" %}
+```cpp
+int a = 0;
+
+for(;;)
+{
+    ++a;
+}
+```
+
+위와 같은 for문을 사용한 무한루프의 어셈블리 코드는 아래와 같다.
+
+![](../.gitbook/assets/image%20%285%29.png)
+
+for 문을 사용한 무한루프의 경우, 어떠한 조건의 비교도 없이 매 순회를 반복한다.
+{% endtab %}
+
+{% tab title="while" %}
+```cpp
+int a = 0;
+
+while(1)
+{
+	++a;
+}
+```
+
+while 문을 사용한 간단한 무한루프 코드로, 해당 코드의 어셈블리는 다음과 같다.
+
+![](../.gitbook/assets/image.png)
+
+for 문을 활용한 무한루프와는 다르게 매 순회마다 조건을 확인하는 부분이 들어있는 것을 확인할 수 있다.
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+하지만 최적화 컴파일 옵션을 킨 상태로 컴파일 할 경우,  for 문을 사용한 무한루프와 같은 모습을 보이게 된다.
+{% endtab %}
+
+{% tab title="do-while" %}
+```cpp
+do
+{
+    // 로직 처리
+    
+    // 예외 발생
+    // break로 반복문을 중지
+    
+} while(0);
+```
+
+위의 코드는 한번만 사용하고 그만두는 코드이기 때문에 굳이 왜 사용하는지 몰랐었다.  
+해당 코드는 로직 중간 break를 사용하여 try catch 문과 유사하게 사용될 수 있으며,  
+주로 매크로 함수를 만들 경우 사용된다.
+{% endtab %}
+{% endtabs %}
 
