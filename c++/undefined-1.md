@@ -23,6 +23,7 @@ visual stduio에서 debug / release 모드 별 함수 호출 방식
 #### 호출규약
 
 * cdecl
+  * 
 * stdcall
 * fastcall
 
