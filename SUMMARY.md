@@ -23,4 +23,5 @@
 * [1장 도메인 모델 시작](ddd-domain-driven-design/1.md)
 * [2장 아키텍처 개요](ddd-domain-driven-design/2.md)
 * [3장 Aggregate\(애그리거트\)](ddd-domain-driven-design/3-aggregate.md)
+* [4장 리포지터리와 모델 구현](ddd-domain-driven-design/4.md)
 
