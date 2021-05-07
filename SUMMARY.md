@@ -24,4 +24,5 @@
 * [2장 아키텍처 개요](ddd-domain-driven-design/2.md)
 * [3장 Aggregate\(애그리거트\)](ddd-domain-driven-design/3-aggregate.md)
 * [4장 리포지터리와 모델 구현](ddd-domain-driven-design/4.md)
+* [5장 리포지터리의 조회 기능](ddd-domain-driven-design/5.md)
 
