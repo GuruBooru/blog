@@ -25,4 +25,5 @@
 * [3장 Aggregate\(애그리거트\)](ddd-domain-driven-design/3-aggregate.md)
 * [4장 리포지터리와 모델 구현](ddd-domain-driven-design/4.md)
 * [5장 리포지터리의 조회 기능](ddd-domain-driven-design/5.md)
+* [6장 응용 서비스와 표현 영역](ddd-domain-driven-design/6.md)
 
