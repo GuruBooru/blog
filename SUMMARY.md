@@ -27,3 +27,8 @@
 * [5장 리포지터리의 조회 기능](ddd-domain-driven-design/5.md)
 * [6장 응용 서비스와 표현 영역](ddd-domain-driven-design/6.md)
 
+## 리펙토링
+
+* [시작하면서](undefined/undefined.md)
+* [1장](undefined/1.md)
+
