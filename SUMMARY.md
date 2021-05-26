@@ -27,6 +27,7 @@
 * [5장 리포지터리의 조회 기능](ddd-domain-driven-design/5.md)
 * [6장 응용 서비스와 표현 영역](ddd-domain-driven-design/6.md)
 * [7장 도메인 서비스](ddd-domain-driven-design/7.md)
+* [8장 애그리거트 트랜잭션 관리](ddd-domain-driven-design/8.md)
 
 ## 리펙토링
 
