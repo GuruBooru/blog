@@ -34,4 +34,5 @@
 * [시작하면서](undefined/undefined.md)
 * [1장](undefined/1.md)
 * [2장 리팩토링 개론](undefined/2.md)
+* [3장 코드의 구린내](undefined/3.md)
 
