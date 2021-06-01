@@ -33,5 +33,44 @@
 
 ## BOUNDED CONTEXT 간 통합
 
+* 하위 도메인에서 새로운 기능을 도입하면서 기존과는 별개의 Bounded Context가 만들어질 경우, 하위 도메인에는 기존의 Bounded Context와 새로운 기능을 위한 Bounded Context가 생긴다.
+* 이 두 Bounded Context가 관련된 Bounded Context를 개발하게 된다면, Bounded Context 간 통합이 발생하게 된다.
+* 한 쪽의 Bounded Context를 다른 쪽의 Bounded Context로 변환하는 작업을 뜻한다고 이해 이 과정에서 변환 작업이 복잡할 경우 변환 처리를 위한 별도의 클래스 작성, 해당 클래스에서 처리하도록 수행할 수 있음 
+* REST API를 사용하는 방식
 
+  * 직접 통합하는 방식
+  * Infra Structure 단에서 데이터를 받아 도메인 인터페이스에서 해당 데이터를 가공하여 통합
+
+* 메시지 큐 사용하는 방식
+  * 간접 통합 방식
+  * 각 Bounded Context 사이에 메시지 큐를 추가하여 비동기로 메시지 처리
+
+## BOUNDED CONTEXT 간 관계
+
+* Bounded Context 간 다양한 방식의 관계가 존재
+  1. 한쪽에서 API 제공, 다른 한쪽에서 API 호출
+
+     * API를 사용하는 쪽에서 API를 제공하는 쪽에 의존
+     * 보통 상류 컴포넌트에서 하류 컴포넌트가 사용할 수 있는 프로토콜 정의
+     * 공개 호스트 서비스
+     * 하류 컴포넌트에서 상류 서비스의 모델이 자신의 모델에 영향을 주지 않도록 보호하는 완충지대를 만들어 사용
+
+  2. 두 Bounded Context가 같은 모델을 공유
+
+     * 두 Bounded Context가 공유하는 모델을 `공유 커널`이라고 부름
+     * 중복을 줄여주는 장점
+     * 한쪽에서 임의로 모델을 변경할 수 없고, 밀접한 관계 유지
+
+  3. 독립 방식
+     * 서로 통합하지 않는 방식
+     * 두 Bounded Context 간 통합은 수동으로 처리
+     * 규모가 커질수록 한계가 있음
+
+## 컨텍스트 맵
+
+* 개별 Bounded Context에 매몰되어 전체를 보지 못하는 상황을 방지
+* Bounded Context 간 관계를 표시
+* Bounded Context 영역에 주요 애그리거트를 함께 표시하면 모델에 대한 관게가 더 명확하게 드러남
+* 시스템의 전체 구조를 보여주어 하위 도메인과 일치하지 않는 Bounded Context를 찾아 도메인에 맞게 조절 핵심 도메인을 위해 조직 역량을 어떤 Bounded Context에 집중할지 파악하는데 도움을 줌
+* 컨텍스트 맵을 그리는 규칙은 따로 없으며, 각 컨텍스트의 관계를 이해할 수 있으면 된다.
 
