@@ -36,4 +36,5 @@
 * [1장](undefined/1.md)
 * [2장 리팩토링 개론](undefined/2.md)
 * [3장 코드의 구린내](undefined/3.md)
+* [4장 테스트 작성 + 5장 한줄 요약](undefined/4-+-5.md)
 
