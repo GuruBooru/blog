@@ -30,6 +30,7 @@
 * [8장 애그리거트 트랜잭션 관리](ddd-domain-driven-design/8.md)
 * [9장 도메인 모델과 Bounded Context](ddd-domain-driven-design/9-bounded-context.md)
 * [10장 이벤트](ddd-domain-driven-design/10.md)
+* [11장 CQRS](ddd-domain-driven-design/11-cqrs.md)
 
 ## 리펙토링
 
