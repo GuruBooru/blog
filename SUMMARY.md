@@ -39,5 +39,5 @@
 * [2장 리팩토링 개론](undefined/2.md)
 * [3장 코드의 구린내](undefined/3.md)
 * [4장 테스트 작성 + 5장 한줄 요약](undefined/4-+-5.md)
-* [6장 메소드 정리](undefined/6.md)
+* [6장 기본적인 리팩토링](undefined/6.md)
 
