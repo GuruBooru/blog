@@ -40,4 +40,5 @@
 * [3장 코드의 구린내](undefined/3.md)
 * [4장 테스트 작성 + 5장 한줄 요약](undefined/4-+-5.md)
 * [6장 기본적인 리팩토링](undefined/6.md)
+* [7장 객체 간의 기능 이동](undefined/7.md)
 
