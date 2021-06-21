@@ -42,4 +42,5 @@
 * [6장 기본적인 리팩토링](undefined/6.md)
 * [7장 객체 간의 기능 이동](undefined/7.md)
 * [8장 데이터 체계화](undefined/8.md)
+* [9장 조건문 간결화](undefined/9.md)
 
