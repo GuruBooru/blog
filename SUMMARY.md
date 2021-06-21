@@ -43,4 +43,5 @@
 * [7장 객체 간의 기능 이동](undefined/7.md)
 * [8장 데이터 체계화](undefined/8.md)
 * [9장 조건문 간결화](undefined/9.md)
+* [10장 메소드 호출 단순화](undefined/10.md)
 
